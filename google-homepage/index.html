@@ -25,25 +25,64 @@
 
         .form input[type=search] {
             border-radius: 20px;
-            padding: 6px;
+            padding: 6px 30px;
             margin-top: 8px;
             margin-right: 16px;
             font-size: 20px;
         }
 
         .btn{
-            padding: 10px;
+            padding: 10px 15px;
             border: none
+        }
+
+        .btn:hover{
+            border: .5px solid black;
+        }
+        
+        .nav{
+            padding-bottom: 20%;
+        }
+
+        .nav ul{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .nav li{
+            padding: 0px 5px;
+        }
+
+        .nav a{
+            color: black;
+            text-decoration: none;
+        }
+        
+        a:hover{
+            text-decoration: underline;
         }
 
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="nav">
+            <ul>
+                <li> <a href="#">Gmail </a></li>
+                <li> <a href="#">Picture </a></li>
+                <li> <a href="#"> <img src="/view_list-24px.svg"> </a> </li>
+                <li> <a href="#"> <img src="/account_circle-24px.svg"> </a> </li>
+            </ul>
+        </div>
+
         <img src="googlelogo_color_272x92dp.png" alt="google-img">
+
         <div class="form">
             <input type="search" id="gsearch">
         </div>
+
         <button class="btn">Myls Lucky</button>
         <button class="btn">Google Search</button>
     </div>
