@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    let ask = parseInt(prompt('How many sets you wanna play?'))
+    let i = 1
+    while (ask >= i){
+        function playGame(){
+            const playerSelect = prompt(`Set :${i}, ROCK? PAPER? SCISSORS?`).toUpperCase();
+            if (playerSelect === 'ROCK' || playerSelect === 'PAPER' || playerSelect === 'SCISSORS'){
+            const myArr = ['ROCK', 'PAPER', 'SCISSORS'];
+            function computerPlay(){
+                return myArr[~~(Math.random() * myArr.length)]
+            }
+            const computerSelect = computerPlay()
+            function playRound(playerSelect, computerSelect){
+                if (playerSelect === 'ROCK' && computerSelect === 'PAPER'){
+                    console.log(`Player: ${playerSelect}, Computer: ${computerSelect}`);
+                    console.log('YOU LOSE! Computer wins');
+                }else if (playerSelect === 'PAPER' && computerSelect === 'SCISSORS'){
+                    console.log(`Player: ${playerSelect}, Computer: ${computerSelect}`);
+                    console.log('YOU LOSE! Computer wins');
+                }else if (playerSelect === 'PAPER' && computerSelect === 'SCISSORS'){
+                    console.log(`Player: ${playerSelect}, Computer: ${computerSelect}`);
+                    console.log('YOU LOSE! Computer wins');
+                }else if (playerSelect === computerSelect){
+                    console.log(`Player: ${playerSelect}, Computer: ${computerSelect}`);
+                    console.log('---Draw---');
+                }else{
+                    console.log(`Player: ${playerSelect}, Computer: ${computerSelect}`);
+                    console.log('---Player WINS---');
+                }
+            }
+            playRound(playerSelect, computerSelect)
+            }else{
+                alert('Your input is wrong')
+                playGame()    
+            }
+        }
+        playGame()
+    i++
+    }
+    
+    
+</script>
+</body>
+</html>
